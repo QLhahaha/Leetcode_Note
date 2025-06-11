@@ -31,6 +31,9 @@ st.push([_element]);
 - find cycle start → fast and slow pointer to find intersection point + slow fast same slow speed start at start and intersection resepctively, they will intersect at cycle start
 
 
+### String
+- KMP algorithm -> find sub patterns <br> find if a string is a substring of another
+
 ## **Warning**
 - .size() returns size_t, which is unsigend
 
