@@ -33,6 +33,7 @@ st.push([_element]);
 
 ### String
 - KMP algorithm -> find sub patterns <br> find if a string is a substring of another
+- add prefix(such as "*") for each element and "#" to indicate NULL to serialize a string
 
 ## **Warning**
 - .size() returns size_t, which is unsigend
