@@ -42,4 +42,4 @@ st.push([_element]);
 
 - std::sort(std::pair<T, T>) will based on the comparison result of pair.first, and then second if firsts are equal.
 
-- priority_queue<T> : max_heap <br> priority_queue<T, vector<T>, greater<T>> : min_heap
+- priority_queue<T> : max_heap <br> priority_queue<T, vector&lt;T&gt;, greater&lt;T&gt;> : min_heap
