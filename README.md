@@ -1,3 +1,5 @@
 # Leetcode_Note
 
-[Leetcode Note](./Leetcode_Note.md)
+[algorithm](algorithm.md)
+[building_block](building_block.md)
+[syntax](language_syntax.md)
