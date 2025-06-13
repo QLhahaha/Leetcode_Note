@@ -2,6 +2,11 @@
 
 ## Python
 
+## 0. General
+### mutable vs immutable
+- immutable: strings, tuples, frozensets
+- mutable: lists, sets, dictionaries
+
 ## 1. Basic Syntax
 ### 1.1 Variable Assignment & Types
 ```python

@@ -12,5 +12,6 @@ Divided into several categories, each with its own common patterns and tricks.
 - [String](algorithm/string.md)
 - [Bit Operation](algorithm/bit_operation.md)
 - [Tree](algorithm/tree.md)
+- [Graph](algorithm/graph.md)
 
 
