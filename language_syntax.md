@@ -3,9 +3,32 @@
 ## Python
 
 ## 0. General
-### mutable vs immutable
+### 0.0 Data Types
+- int: Integer
+- str: String
+- float: Floating point number
+- bool: Boolean
+- list: List (append, remove, sort, reverse)
+- dict: Dictionary (get, keys, values, items)
+- tuple: Tuple
+- set: Set (add, remove, union, intersection)
+- queue: Deque (from collections) (append, popleft)
+- priority queue: heapq (from heapq module) (heapq.heappush, heapq.heappop)
+
+### 0.1 mutable vs immutable
 - immutable: strings, tuples, frozensets
 - mutable: lists, sets, dictionaries
+
+### 0.2 type hints
+int: int
+str: str
+float: float
+bool: bool
+list: List
+dict: Dict
+tuple: Tuple
+queue: Deque
+set: Set
 
 ## 1. Basic Syntax
 ### 1.1 Variable Assignment & Types
