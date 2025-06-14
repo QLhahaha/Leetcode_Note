@@ -76,3 +76,24 @@ def compute_lps(pattern, lps):
             lps[i] = 0
             i += 1
 ```
+
+### 1.3 Union-Find (Disjoint Set Union)
+See [Union-Find](algorithm/graph.md#4-union-find-disjoint-set-union) in `graph.md` for explanation.
+```python
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n))
+
+    def find(self, x):
+        while x != self.parent[x]:
+            x = self.parent[x]
+        return x
+
+    def union(self, x, y):
+        rootX = self.find(x)
+        rootY = self.find(y)
+        if rootX == rootY:
+            return False
+        self.parent[rootX] = rootY
+        return True
+```

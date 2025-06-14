@@ -98,6 +98,10 @@ matrix = [[i*j for j in range(3)] for i in range(3)]
 
 ### 3.2 Dictionary & Set Comprehensions
 ```python
+# default dictionary where key maps to a set or a list
+adjacency_list = defaultdict(set)
+adjacency_list = defaultdict(list)
+
 # Dictionary comprehension
 word_lengths = {word: len(word) for word in words}
 

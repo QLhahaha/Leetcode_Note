@@ -55,24 +55,9 @@ def bfs(graph, start):
     - Uses path compression and union by rank to optimize operations.
 - **Time complexity**: Nearly O(1) for each operation due to optimizations.
 - **Space complexity**: O(n) for storing parent and rank arrays.
-```python
-class UnionFind:
-    def __init__(self, n):
-        self.parent = list(range(n))
+- **Code**: see [Union-Find](../building_block.md#union-find-disjoint-set-union) in `building_block.md` for implementation.
 
-    def find(self, x):
-        while x != self.parent[x]:
-            x = self.parent[x]
-        return x
 
-    def union(self, x, y):
-        rootX = self.find(x)
-        rootY = self.find(y)
-        if rootX == rootY:
-            return False
-        self.parent[rootX] = rootY
-        return True
-```
 
 ### 5. Dijkstra's Algorithm
 - **Use case**: Finding the shortest path from a source vertex to all other vertices in a weighted graph with non-negative weights.
@@ -105,3 +90,44 @@ def dijkstra(graph, start):
     return distances
 ```
 
+### 6. Minimum Spanning Tree (MST)
+- **Use case**: Finding a subset of edges that connects all vertices with the minimum total edge weight.
+- **Algorithms**:
+    - **Kruskal's Algorithm**: Uses Union-Find to add edges in increasing order of weight, ensuring no cycles.
+    - **Prim's Algorithm**: Grows the MST by adding the smallest edge that connects a vertex in the MST to a vertex outside it.
+- **Time complexity**: O(E log E) for Kruskal's, O(E log V) for Prim's.
+- **Space complexity**: O(V) for storing the MST.
+
+### 7. Topological Sort
+- **Use case**: Ordering vertices in a directed acyclic graph (DAG) such that for every directed edge u -> v, vertex u comes before v.
+- **How does it work**:
+    - Compute in-degree (number of incoming edges) for each vertex.
+    - Start with all vertices with in-degree 0.
+    - Remove these vertices and decrease in-degree of their neighbors.
+    - Repeat until all vertices are processed or a cycle is detected.
+- **Time complexity**: O(V + E)
+- **Space complexity**: O(V) for the in-degree array and queue.
+- **Code**:
+```python
+def topological_sort(graph):
+    in_degree = {u: 0 for u in graph}
+    for u in graph:
+        for v in graph[u]:
+            in_degree[v] += 1
+
+    queue = deque([u for u in graph if in_degree[u] == 0])
+    topo_order = []
+
+    while queue:
+        u = queue.popleft()
+        topo_order.append(u)
+        for v in graph[u]:
+            in_degree[v] -= 1
+            if in_degree[v] == 0:
+                queue.append(v)
+
+    if len(topo_order) == len(graph):
+        return topo_order
+    else:
+        # Graph has a cycle
+        return []
