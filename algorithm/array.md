@@ -2,7 +2,6 @@
 
 ### 1. Quickselect
 - **Use case**: finding kth largest, kth smallest, kth frequent, kth less frequent, etc (similar idea of quick sort)
-
 - **How does it work**: 
     - `quickselect(nums, k)` where `k` is the kth element you want to find (1-based index).
     - Partition the array around a pivot, similar to quicksort.
